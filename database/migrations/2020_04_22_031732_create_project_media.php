@@ -13,17 +13,17 @@ class CreateProjectMedia extends Migration
      */
     public function up()
     {
-        Schema::create('project_media', function (Blueprint $table) {
+        Schema::create('project_mediaTech', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('project_id');
             $table->foreign('project_id')
                   ->references('id')
                   ->on('projects')
                   ->onDelete('cascade');
-            $table->unsignedBigInteger('media_id');
-            $table->foreign('media_id')
+            $table->unsignedBigInteger('media_theque_id');
+            $table->foreign('media_theque_id')
                 ->references('id')
-                ->on('media')
+                ->on('media_theques')
                 ->onDelete('cascade');
             $table->timestamps();
         });
