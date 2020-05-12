@@ -20,6 +20,7 @@ class CreateProjectsTable extends Migration
             $table->date('date_creation');
             $table->string('outils');
             $table->string('describe');
+            $table->string('filename');
             $table->timestamps();
             $table->softDeletes();
 
